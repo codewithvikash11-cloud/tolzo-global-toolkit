@@ -21,18 +21,18 @@
     --primary-foreground: 0 0% 100%;
     --primary-glow: 262 83% 68%;
 
-    /* Secondary - Soft Purple */
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 6% 10%;
+    /* Secondary - Vibrant Blue */
+    --secondary: 220 90% 56%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted - Subtle Grays */
     --muted: 240 5% 96%;
     --muted-foreground: 240 4% 46%;
 
-    /* Accent - Vibrant Cyan */
-    --accent: 189 94% 43%;
+    /* Accent - Vibrant Purple */
+    --accent: 280 70% 60%;
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 189 94% 53%;
+    --accent-glow: 280 75% 70%;
 
     /* Destructive */
     --destructive: 0 84% 60%;
@@ -45,17 +45,25 @@
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(220 90% 56%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(189 94% 43%) 0%, hsl(262 83% 58%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(220 90% 56%) 50%, hsl(189 94% 43%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(220 90% 56%) 0%, hsl(280 70% 60%) 100%);
+    --gradient-accent: linear-gradient(180deg, hsl(262 83% 58%) 0%, hsl(220 90% 56%) 50%, hsl(280 70% 60%) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(262 83% 58%) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(220 90% 56%) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(280 70% 60%) 0px, transparent 50%);
 
     /* Shadows */
     --shadow-soft: 0 2px 8px hsl(240 10% 3.9% / 0.05);
     --shadow-medium: 0 4px 16px hsl(240 10% 3.9% / 0.08);
     --shadow-large: 0 8px 32px hsl(240 10% 3.9% / 0.12);
-    --shadow-glow: 0 0 40px hsl(262 83% 58% / 0.3);
+    --shadow-xl: 0 20px 50px hsl(240 10% 3.9% / 0.15);
+    --shadow-glow: 0 0 40px hsl(262 83% 58% / 0.4);
+    --shadow-glow-secondary: 0 0 40px hsl(220 90% 56% / 0.4);
+    --shadow-colored: 0 10px 30px -10px hsl(262 83% 58% / 0.5);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 0.75rem;
 
@@ -92,18 +100,18 @@
     --primary-foreground: 0 0% 100%;
     --primary-glow: 262 83% 68%;
 
-    /* Secondary - Dark Purple */
-    --secondary: 240 4% 16%;
-    --secondary-foreground: 0 0% 98%;
+    /* Secondary - Vibrant Blue (Dark) */
+    --secondary: 220 95% 65%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted */
     --muted: 240 4% 16%;
     --muted-foreground: 240 5% 65%;
 
-    /* Accent - Bright Cyan */
-    --accent: 189 94% 43%;
+    /* Accent - Bright Purple (Dark) */
+    --accent: 280 75% 65%;
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 189 94% 53%;
+    --accent-glow: 280 80% 75%;
 
     /* Destructive */
     --destructive: 0 63% 31%;
@@ -115,15 +123,21 @@
     --ring: 262 83% 58%;
 
     /* Dark Mode Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(220 90% 56%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(189 94% 43%) 0%, hsl(262 83% 58%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(220 90% 56%) 50%, hsl(189 94% 43%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(262 90% 68%) 0%, hsl(220 95% 65%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(220 95% 65%) 0%, hsl(280 75% 65%) 100%);
+    --gradient-accent: linear-gradient(180deg, hsl(262 90% 68%) 0%, hsl(220 95% 65%) 50%, hsl(280 75% 65%) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(262 90% 68%) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(220 95% 65%) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(280 75% 65%) 0px, transparent 50%);
 
     /* Dark Shadows with Glow */
     --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.3);
     --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.4);
     --shadow-large: 0 8px 32px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 40px hsl(262 83% 58% / 0.5);
+    --shadow-xl: 0 20px 50px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 50px hsl(262 90% 68% / 0.5);
+    --shadow-glow-secondary: 0 0 50px hsl(220 95% 65% / 0.5);
+    --shadow-colored: 0 10px 30px -10px hsl(262 90% 68% / 0.6);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -152,9 +166,16 @@
 }
 
 @layer components {
-  /* Gradient Text */
+  /* Gradient Text with Animation */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+    animation: gradient-shift 3s ease infinite;
+    background-size: 200% auto;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
   }
 
   /* Glass Effect */
@@ -164,26 +185,57 @@
 
   /* Hero Button */
   .btn-hero {
-    @apply relative overflow-hidden bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105;
-    box-shadow: 0 4px 16px hsl(240 10% 3.9% / 0.08);
+    @apply relative overflow-hidden bg-gradient-to-r from-primary via-secondary to-accent text-primary-foreground font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105;
+    background-size: 200% auto;
+    box-shadow: var(--shadow-medium);
   }
 
   .btn-hero:hover {
+    animation: gradient-shift 2s ease infinite;
     box-shadow: var(--shadow-glow);
   }
 
-  /* Tool Card */
+  /* Tool Card with Enhanced Hover */
   .tool-card {
-    @apply relative overflow-hidden bg-card border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1;
+    @apply relative overflow-hidden bg-card border border-border rounded-2xl p-6 transition-all duration-300 hover:border-primary/50;
     box-shadow: var(--shadow-soft);
   }
 
   .tool-card:hover {
-    box-shadow: var(--shadow-large);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-colored);
   }
 
-  /* Category Badge */
+  /* Category Badge with Hover */
   .category-badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary text-secondary-foreground border border-border;
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary/10 text-secondary border border-secondary/20 transition-all duration-300;
+  }
+
+  .category-badge:hover {
+    @apply bg-secondary/20 scale-105;
+  }
+
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Pulse Glow Animation */
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(262 83% 58% / 0.4);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(262 83% 58% / 0.8);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
   }
 }
