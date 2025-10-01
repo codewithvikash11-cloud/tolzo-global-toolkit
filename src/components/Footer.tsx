@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { Wrench, Mail, Github, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Github, Twitter, Linkedin, Instagram } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import tolzoLogo from "@/assets/tolzo-logo.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,10 +14,12 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="p-2 rounded-lg bg-gradient-to-br from-primary via-secondary to-accent animate-pulse-glow">
-                <Wrench className="h-5 w-5 text-white" />
-              </div>
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src={tolzoLogo} 
+                alt="Tolzo Logo" 
+                className="h-10 w-10 rounded-xl shadow-lg"
+              />
               <span className="text-xl font-bold gradient-text">{t('nav.brand')}</span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">

@@ -1,18 +1,21 @@
 import {
   Calculator,
-  DollarSign,
-  Heart,
-  Calendar,
+  Wallet,
+  HeartPulse,
+  CalendarDays,
   FileText,
-  Code,
+  Braces,
   QrCode,
   Palette,
-  Tag,
-  Globe,
-  BarChart,
+  Tags,
+  Globe2,
+  TrendingUp,
   FileJson,
-  Percent,
+  PercentCircle,
   Activity,
+  Type,
+  CircleDollarSign,
+  Sparkles,
 } from "lucide-react";
 
 export interface Tool {
@@ -36,7 +39,7 @@ export const tools: Tool[] = [
   },
   {
     id: "loan-calculator",
-    icon: DollarSign,
+    icon: Wallet,
     title: "Loan Calculator",
     description: "Calculate loan amounts, interest, and repayment schedules",
     category: "Finance",
@@ -44,7 +47,7 @@ export const tools: Tool[] = [
   },
   {
     id: "gst-calculator",
-    icon: Percent,
+    icon: PercentCircle,
     title: "GST Calculator",
     description: "Calculate GST amounts and net prices instantly",
     category: "Finance",
@@ -52,7 +55,7 @@ export const tools: Tool[] = [
   },
   {
     id: "percentage-calculator",
-    icon: Percent,
+    icon: CircleDollarSign,
     title: "Percentage Calculator",
     description: "Calculate percentages, discounts, and increases",
     category: "Finance",
@@ -62,7 +65,7 @@ export const tools: Tool[] = [
   // Health Tools
   {
     id: "bmi-calculator",
-    icon: Heart,
+    icon: HeartPulse,
     title: "BMI Calculator",
     description: "Calculate your Body Mass Index and health status",
     category: "Health",
@@ -70,7 +73,7 @@ export const tools: Tool[] = [
   },
   {
     id: "age-calculator",
-    icon: Calendar,
+    icon: CalendarDays,
     title: "Age Calculator",
     description: "Calculate your exact age in years, months, and days",
     category: "Health",
@@ -88,7 +91,7 @@ export const tools: Tool[] = [
   },
   {
     id: "case-converter",
-    icon: FileText,
+    icon: Type,
     title: "Text Case Converter",
     description: "Convert text between uppercase, lowercase, and more",
     category: "Text",
@@ -96,7 +99,7 @@ export const tools: Tool[] = [
   },
   {
     id: "text-analyzer",
-    icon: BarChart,
+    icon: TrendingUp,
     title: "Text Analyzer",
     description: "Analyze text readability, keyword density, and more",
     category: "Text",
@@ -132,7 +135,7 @@ export const tools: Tool[] = [
   // SEO Tools
   {
     id: "meta-tag-generator",
-    icon: Tag,
+    icon: Tags,
     title: "Meta Tag Generator",
     description: "Generate SEO-friendly meta tags for your website",
     category: "SEO",
@@ -140,7 +143,7 @@ export const tools: Tool[] = [
   },
   {
     id: "domain-age-checker",
-    icon: Globe,
+    icon: Globe2,
     title: "Domain Age Checker",
     description: "Check the age and registration date of any domain",
     category: "SEO",
