@@ -1,6 +1,7 @@
 import { Search, Sparkles, Zap, TrendingUp } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import heroImage from "@/assets/hero-tools.png";
 
 interface HeroProps {
@@ -9,6 +10,7 @@ interface HeroProps {
 
 export const Hero = ({ onSearch }: HeroProps) => {
   const [searchQuery, setSearchQuery] = useState("");
+  const { t } = useTranslation();
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
@@ -32,36 +34,36 @@ export const Hero = ({ onSearch }: HeroProps) => {
           {/* Badge with Icon */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-primary/30 animate-fade-in">
             <Sparkles className="w-4 h-4 text-primary animate-glow" />
-            <span className="text-sm font-medium text-foreground">🌍 Global Tools Platform</span>
+            <span className="text-sm font-medium text-foreground">🌍 {t('hero.badge')}</span>
           </div>
 
           {/* Heading */}
           <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-slide-up">
-            <span className="gradient-text">Tolzo</span>
+            <span className="gradient-text">{t('hero.title')}</span>
             <br />
-            <span className="text-foreground">All the Tools You Need</span>
+            <span className="text-foreground">{t('hero.subtitle1')}</span>
             <br />
-            <span className="text-muted-foreground text-3xl md:text-5xl">in One Place</span>
+            <span className="text-muted-foreground text-3xl md:text-5xl">{t('hero.subtitle2')}</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            From calculators to converters, SEO tools to generators—everything you need to work smarter and faster.
+            {t('hero.description')}
           </p>
 
           {/* Feature Pills */}
           <div className="flex flex-wrap gap-3 justify-center md:justify-start animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium hover:scale-105 transition-transform">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium hover:scale-105 transition-transform cursor-pointer">
               <Zap className="w-4 h-4" />
-              50+ Tools
+              {t('hero.features.tools')}
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium hover:scale-105 transition-transform">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium hover:scale-105 transition-transform cursor-pointer">
               <TrendingUp className="w-4 h-4" />
-              Always Free
+              {t('hero.features.free')}
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium hover:scale-105 transition-transform">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium hover:scale-105 transition-transform cursor-pointer">
               <Sparkles className="w-4 h-4" />
-              AI Powered
+              {t('hero.features.ai')}
             </div>
           </div>
 
@@ -71,7 +73,7 @@ export const Hero = ({ onSearch }: HeroProps) => {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
               <Input
                 type="text"
-                placeholder="Find Your Tool Quickly..."
+                placeholder={t('hero.search')}
                 value={searchQuery}
                 onChange={handleSearch}
                 className="pl-12 pr-4 py-6 text-lg rounded-2xl border-2 border-border focus:border-primary bg-background/50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg focus:shadow-xl"
@@ -81,8 +83,8 @@ export const Hero = ({ onSearch }: HeroProps) => {
 
           {/* Popular Searches */}
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 animate-slide-up" style={{ animationDelay: '0.8s' }}>
-            <span className="text-sm text-muted-foreground">Popular:</span>
-            {["EMI Calculator", "BMI Calculator", "Currency Converter", "QR Code"].map((term) => (
+            <span className="text-sm text-muted-foreground">{t('hero.popular')}:</span>
+            {[t('tools.emi'), t('tools.bmi'), t('tools.currency'), t('tools.qr')].map((term) => (
               <button
                 key={term}
                 onClick={() => {
